@@ -1,0 +1,8 @@
+.login {
+		background-image: url("../../icons/dashboard-ferrari.jpg");
+		background-position: center;
+		background-size: cover; /* or contain depending on what you want */
+        background-repeat: no-repeat;
+        margin:0;
+        padding:0;
+}
