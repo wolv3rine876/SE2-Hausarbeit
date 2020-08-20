@@ -23,5 +23,5 @@
 hs_err_pid*
 
 .idea
-frontend
 node_modules
+target
