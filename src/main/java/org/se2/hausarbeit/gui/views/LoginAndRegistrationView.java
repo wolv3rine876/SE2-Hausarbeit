@@ -99,19 +99,7 @@ public class LoginAndRegistrationView extends BaseView {
         content.add(contentWrapper);
         content.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        this.setPageContent(content, false);
-    }
-
-    private void handelOperationFeedback(OperationFeedback feedback) {
-        if(feedback.message != null) {
-            Notification notification = new Notification(feedback.message);
-            notification.setDuration(3000);
-            notification.removeThemeName("Material");
-            ThemeList a = notification.getThemeNames();
-            if(!feedback.success) notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
-            else notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
-            notification.open();
-        }
+        this.setPageContent(content, false, PAGE.WELCOME);
     }
     private <T extends HasValue & HasValidation> boolean checkIsNullOrEmpty(T field) {
         if(field.getValue() == null || field.getValue().equals("")) {
