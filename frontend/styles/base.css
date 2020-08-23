@@ -6,3 +6,23 @@
         margin:0;
         padding:0;
 }
+.search {
+		background-image: url("../../icons/light.jpg");
+		background-position: center;
+		background-size: cover; /* or contain depending on what you want */
+        background-repeat: no-repeat;
+        margin:0;
+        padding:0;
+}
+.reservation {
+		background-image: url("../../icons/mercedes.jpg");
+		background-position: center;
+		background-size: cover; /* or contain depending on what you want */
+        background-repeat: no-repeat;
+        margin:0;
+        padding:0;
+}
+.transparent {
+        opacity: 0.75;
+        color: rgba(0,0,0,1) !important;
+}
