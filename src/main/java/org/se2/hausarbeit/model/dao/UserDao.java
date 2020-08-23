@@ -15,6 +15,7 @@ public class UserDao extends BaseDao {
     public User getByEmailAndPassword(String email, String password) throws DatabaseException, NoSuchUserOrPasswordException {
         User user = null;
         try {
+            // Todo: nur benutzer laden
             ResultSet rs = this.setSQL("SELECT * FROM public.benutzer as b WHERE b.email=? AND b.passwort=?")
                     .setString(email)
                     .setString(password)

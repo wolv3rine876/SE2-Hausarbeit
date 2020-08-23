@@ -1,7 +1,6 @@
 package org.se2.hausarbeit.gui.components;
 
-import com.vaadin.flow.component.html.Anchor;
-import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
@@ -11,9 +10,9 @@ public class Footer extends HorizontalLayout {
         this.setWidthFull();
         //this.setHeight("5%");
 
-        Anchor contactLink = new Anchor("", "Kontak");
-        Anchor impressumLink = new Anchor("", "Impressum");
-        Anchor aboutusLink = new Anchor("", "Über Uns");
+        H5 contactLink = new H5( "Kontak");
+        H5 impressumLink = new H5( "Impressum");
+        H5 aboutusLink = new H5( "Über Uns");
         contactLink.getElement().getStyle().set("padding", "0");
         impressumLink.getElement().getStyle().set("padding", "0");
         aboutusLink.getElement().getStyle().set("padding", "0");

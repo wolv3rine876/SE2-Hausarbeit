@@ -38,6 +38,16 @@ public class BaseDao {
         }
         return this;
     }
+    BaseDao setInt(int s) throws DatabaseException {
+        try{
+            this.statement.setInt(index++, s);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            throw new DatabaseException("Fehler beim Erstellen der Datenbankanfrage");
+        }
+        return this;
+    }
     ResultSet executeQuerry() throws DatabaseException {
         ResultSet result = null;
         try {
