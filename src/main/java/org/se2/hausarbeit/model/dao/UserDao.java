@@ -4,6 +4,7 @@ import org.se2.hausarbeit.model.entity.User;
 import org.se2.hausarbeit.process.exception.DatabaseException;
 import org.se2.hausarbeit.process.exception.NoSuchUserOrPasswordException;
 import org.se2.hausarbeit.process.exception.UserAlreadyRegisteredException;
+import org.se2.hausarbeit.services.util.ROLE;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,8 +16,7 @@ public class UserDao extends BaseDao {
     public User getByEmailAndPassword(String email, String password) throws DatabaseException, NoSuchUserOrPasswordException {
         User user = null;
         try {
-            // Todo: nur benutzer laden
-            ResultSet rs = this.setSQL("SELECT * FROM public.benutzer as b WHERE b.email=? AND b.passwort=?")
+            ResultSet rs = this.setSQL("SELECT * FROM public.benutzer as b WHERE b.email=? AND b.passwort=? AND b.rolle=" + ROLE.BENUTZER)
                     .setString(email)
                     .setString(password)
                     .executeQuerry();
