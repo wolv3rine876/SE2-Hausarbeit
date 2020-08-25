@@ -41,9 +41,12 @@ public class LoginAndRegistrationView extends BaseView {
         loginEmail.setRequiredIndicatorVisible(true);
         loginEmail.setClearButtonVisible(true);
         loginEmail.setErrorMessage("Ungültige E-Mail Adresse");
+        loginEmail.setId("emailField");
         PasswordField loginPassword = new PasswordField("Passwort");
         loginPassword.setRequired(true);
+        loginPassword.setId("passwordField");
         Button loginButton = new Button("Login");
+        loginButton.setId("loginButton");
         VerticalLayout login = new VerticalLayout(loginEmail, loginPassword, loginButton);
         login.setAlignItems(FlexComponent.Alignment.CENTER);
 
