@@ -19,6 +19,7 @@ public abstract class BaseView extends AppLayout implements BeforeEnterObserver 
     void setPageContent(VerticalLayout layout, boolean checkLogin, String page) {
         this.checkLogin = checkLogin;
         this.addToNavbar(new Header(page));
+        
         layout.setHeightFull();
         VerticalLayout content = new VerticalLayout(layout, new Footer());
         content.setSizeFull();

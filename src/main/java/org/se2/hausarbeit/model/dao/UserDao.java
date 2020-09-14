@@ -66,4 +66,8 @@ public class UserDao extends BaseDao {
                     .executeUpdate("id");
         user.setId(id);
     }
+    public void deleteUser(int userId) throws DatabaseException {
+        String sql = "DELETE FROM public.benutzer AS b WHERE b.id=?";
+        this.setSQL(sql).setInt(userId).executeUpdate();
+    }
 }
