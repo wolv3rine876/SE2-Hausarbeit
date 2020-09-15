@@ -40,7 +40,7 @@ public class LoginTest {
         String idPassword = "passwordField";
         String idButton = "loginButton";
 
-        WebDriverWait wait = new WebDriverWait(driver, 25);
+        WebDriverWait wait = new WebDriverWait(driver, 45);
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id(idEmail)));
 
         driver.findElement(By.id(idEmail)).sendKeys("mr.olypia@iron-pump.com");
